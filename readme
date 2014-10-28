@@ -18,7 +18,6 @@ MJJ.setWS        ( "backend.php");
 MJJ.setFloatPosicion( "bottom");		
 MJJ.setWidth 	( 600 ) ;
 ```
-
 Asi de simple, este script guardara automaicamente en una base de datos sql Lite para evitar configuracion de servidores sql,mysql,oracle,etc. Tambien filtrara automaticamente por medio del HOST;osea que si tiene 7 websites, no necesita cambiar nada. El script va a dividir los correos automaticamente agrupandolos por el host el cual linkea al script.	
 
 Actualmente  no tiene un GUI administrativo para los correos,pronto sera desarrollado..aun asi los datos pueden ser visualizados directamente con SQLITE MANAGER
