@@ -1,41 +1,66 @@
-// vim: sw=4:ts=4:nu:nospell:fdc=4
-/**
-* all framework
-*
-* @author Ing. James Jara
-* @copyright (c) 2011-2012, by Ing. James Jara
-* @date 03. Julio 2012
-* @version $Id: sc.js  2011-07-03 05:12:14Z james $
-*
-* @license all framework is licensed under the terms of the Open Source
-* LGPL 3.0 license. Commercial use is permitted to the extent that the
-* code/component(s) do NOT become part of another Open Source or Commercially
-* licensed development library or toolkit without explicit permission.
-*
-* License details: http://www.gnu.org/licenses/lgpl.html
-*/
+Labels
+Mail, php, jQuery, Automation, AJAX, Object, Sqlite, Webservice, Webservices, JavaScript, Academic, Accessibility, JAMESJARA, Statistics, REST
+
+Simple y sencillo recolector de correos el cual solo necesita ser linkeado en el "body" de un html, el script es totalmente configurable de la siguiente manera.
+
+![](http://3.bp.blogspot.com/-ANEiBDx1r_Y/ThJRLjdpDMI/AAAAAAAAAy8/WcHLjM1vm68/s1600/MAILER+JAMES+JARA.PNG)
 
 
+```JAVASCRIPT
+MJJ = new mailer_jamesjara()
+MJJ.setId	( "host_id" );
+MJJ.setTitulo 	( "No se pierda las actualizacione");
+MJJ.setContenido1( "mensaje 1!");			
+MJJ.setContenido2( "Nosotros odiamos el spam");	
+MJJ.setButton	 ( "Subscribir");
+MJJ.setTipo	 ( "banner");//Hay 3 tipos
+MJJ.setWS        ( "backend.php");
+MJJ.setFloatPosicion( "bottom");		
+MJJ.setWidth 	( 600 ) ;
+```
+
+Asi de simple, este script guardara automaicamente en una base de datos sql Lite para evitar configuracion de servidores sql,mysql,oracle,etc. Tambien filtrara automaticamente por medio del HOST;osea que si tiene 7 websites, no necesita cambiar nada. El script va a dividir los correos automaticamente agrupandolos por el host el cual linkea al script.	
+
+Actualmente  no tiene un GUI administrativo para los correos,pronto sera desarrollado..aun asi los datos pueden ser visualizados directamente con SQLITE MANAGER
+
+Esta desarrollado en php , javascript , jquery.
 
 
-Instruciones:
-1. Poner dentro del body, antes del body las referencias a los scripts.
-ej.
-<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
-<script type="text/javascript" src="http://plugins.jquery.com/files/jquery.cookie.js.txt"></script>
-<script type="text/javascript" src="http://plugins.jquery.com/files/jquery.floatobject-1.4.js.txt"></script>
-<script type="text/javascript" src="http://amirharel.com/labs/fo/jquery.floatobject-1.0.js"></script>
-<script type="text/javascript" src="sc.js"></script>
-<script type="text/javascript">MJJ.setTipo("banner");MJJ.run();</script>
-</html>
+*Mass Mail recolector (MMR)*
+Fuente original : http://3plej-life.blogspot.com/2011/07/mass-mail-recolector-mmr.html
 
-2.Seleccionar el tipo (banner,widget,popup)
-banner: banner flotante
-widget: div normal
-popup: ventana completa
+*Asunto:*
+Simple y sencillo recolector de correos, osea parte del marketing web es nunca perder un visitante y siempre traerlo de vuelta.. mail listing es una manera, por eso este proyecto. Con este script javascript / php programado a objetos OOD,POO; solo necesitara colocarlo en sus sitios web y automaticamente tendra el script funcionando para que sus visitas se subscriban.
 
-3.Configurar el webservice MJJ.setWS("url") esta debe apuntar al archivo backend.php
+*Titulo:*
+Mass Mail recolector (MMR) / james-jara-mail-recolector
 
-4. Configurar el backend.php , el nombre del archivo cambiarlo, ALERTA, RIESGO.. SI NO SE CAMBIA puede ser descargado.
+*Lenguaje de programacion*
+Javascript : front end , Php: back end
 
-5.listo.
+
+*Dependencias:*
+Jquery, Jqfloatobject
+
+
+*Para que sirv*
+Recolectar correos de las visitas de la forma mas sencilla posible para luego crear campañas.
+
+*Como funciona:*
+Casi arquitectura de tres capas. El cliente JS osea el "formulario" toma los datos, los valida, luego envia los datos a un ws que los captura. El ws tambien esta incluido o puede poner la url de suyo mismo.
+==tutorial abajo:==
+
+
+*Desarrollador:*
+James Jara.
+
+*Descarga directa:*
+http://code.google.com/p/james-jara-mail-recolector/downloads/detail?name=recolector_mails.zip&can=2&q=#makechanges
+
+
+*Codigo fuente en google code: *
+http://code.google.com/p/james-jara-mail-recolector/
+
+*Codigo fuente online:*
+http://james-jara-mail-recolector.googlecode.com/svn/trunk/
+
